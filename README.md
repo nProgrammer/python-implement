@@ -16,10 +16,14 @@ import (
 )
 
 func main() {
-code :=
+    code :=
 `def a():
-	print()
+    print()
 a()`
+   
+   var python python_implement.Python
+   python.ExecuteCode(code)
+   
 }
 
 ```
