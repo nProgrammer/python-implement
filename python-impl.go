@@ -14,3 +14,10 @@ func (p Python) Execute(file string) {
 	cmd.Stderr = os.Stderr
 	log.Println(cmd.Run())
 }
+
+func (p Python) ExecuteCode(code string) {
+	cmd := exec.Command("python3", "-c", code)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	log.Println(cmd.Run())
+}
